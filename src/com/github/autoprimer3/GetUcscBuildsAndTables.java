@@ -48,7 +48,8 @@ public class GetUcscBuildsAndTables {
     //get build names and DAS urls
     public void connectToUcsc() throws DocumentException, MalformedURLException{
         SAXReader reader = new SAXReader();
-        URL url = new URL("http://genome.ucsc.edu/cgi-bin/das/dsn");
+        URL url = new URL("https://genome.ucsc.edu/cgi-bin/das/dsn");
+        //URL url = new URL("http://genome.ucsc.edu/cgi-bin/das/dsn");
         //URL url = new URL("http://genome-euro.ucsc.edu/cgi-bin/das/dsn");
         dasGenomeXml  = reader.read(url);
         readDasGenomeXmlDocument();
